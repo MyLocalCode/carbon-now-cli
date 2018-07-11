@@ -2,6 +2,14 @@ language: node_js
 os:
   - osx
 node_js:
-  - '10'
-  - '9'
-  - '8'
+  - "node"
+  - "lts/*"
+cache:
+  directories:
+    - node_modules
+branches:
+  only:
+      - master
+      - /^greenkeeper/.*$/
+notifications:
+  email: false
