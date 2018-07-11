@@ -40,11 +40,11 @@ test('Downloads code image correctly', async t => {
 	}
 });
 
-/*test('Respects download location', async t => {
+test('Respects download location', async t => {
 	await headlessVisit('https://carbon.now.sh', downloadDir);
 
-	t.true((await globby([fullDownloadPath])).length > 0);
-});*/
+	t.false((await globby([fullDownloadPath])).length > 0);
+});
 
 // Cleanup
 test.after.always((async () => {
